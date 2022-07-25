@@ -28,6 +28,32 @@ async function base () { //function for question set to be asked inside node.js
       message: 'Please enter the first name of the employee?',
       name: 'name',
     },
+
+		//specific questions per role [manager, engineer, intern]
+		{
+			type: 'input',
+			message: 'What is the office number?',
+			name: 'office_number',
+			when: function (answers) { //return function that returns true statement
+				return answers.role === 'manager'
+			}
+		},
+		{
+			type: 'input',
+			message: 'What is the github username/link?',
+			name: 'github',
+			when: function (answers) { //return function that returns true statement
+				return answers.role === 'engineer'
+			}
+		},
+		{
+			type: 'input',
+			message: 'What is the school/institution name?',
+			name: 'school',
+			when: function (answers) { //return function that returns true statement
+				return answers.role === 'intern'
+			}
+		},
   ])
 
 }
