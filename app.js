@@ -66,7 +66,7 @@ async function base () { //function for question set to be asked inside node.js
   	if (!answers.register) { //TRUE, statement
 		//FALSE, statement once the user answered NO
 	} 	else {
-		base(); //This a recursive approach, that let user to repeats the same question in a loop cycle.
+		await base(); //This a recursive approach, that let user to repeats the same question in a loop cycle.
 	}
 }
 
