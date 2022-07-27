@@ -13,7 +13,24 @@ function generateCard(employee) { // function to generate the card for each empl
         .replace('{{id}}', employee.getId())
         .replace('{{email}}', employee.getEmail())
     
-    // Statement 
+    // Statements to replace the placeholder specific per role
+    // Manager, for Office Number
+    if (employee.getRole() === 'Manager') {
+        replacedData = replacedData.replace('{{attr_key}}', 'Office Number')
+            replace('{{attr_value}}', employee.getOfficeNumber())
+    }
+    // Engineer, for Github
+    if (employee.getRole() === 'Engineer') {
+        replacedData = replacedData.replace('{{attr_key}}', 'Github')
+            replace('{{attr_value}}', employee.getGithub())
+    }
+    // Engineer, for Github
+    if (employee.getRole() === 'Intern') {
+        replacedData = replacedData.replace('{{attr_key}}', 'School')
+            replace('{{attr_value}}', employee.getSchool())
+    }
+
+    return replacedData; //return the Let replacedData => string
 }
 
 function generateHtml (employees) {
