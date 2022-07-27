@@ -3,9 +3,10 @@ const Engineer = require('./src/employees/Engineer');
 const Intern = require('./src/employees/Intern');
 const Manager = require('./src/employees/Manager');
 const fs = require('fs'); // import the filesystem module
+const path = require('path');
 
 const employees = []; //global variable with an empty array
-
+const renderedOutput = path.join(__dirname, 'dist', 'team-profile.html'); // assigned variable for the rendered output html file
 
 async function main() { //function for question set to be asked inside node.js
 
@@ -84,8 +85,15 @@ async function main() { //function for question set to be asked inside node.js
 		// generate the html
 		const html = generateHtml(employees);
 
-		// creates a new html file, using synchronous method
-		fs.writeFileSync(outputHtmlFile, html, 'utf-8');
+		// creates a new html file, using synchronous method //fs.writeFileSync(outputHtmlFile, html, 'utf-8');
+		// using additional feature, try-catch block that may throw errors
+		try {
+			fs.writeFileSync(renderedOutput, html, 'utf-8'); // calling the fs module
+			console.log("File written succesfully");
+		} catch (err) {
+			console.error(err);
+		}	console.log("You're awesome");
+
 
 		//FALSE, statement once the user answered NO
 	} 	else {
