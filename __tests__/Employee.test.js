@@ -39,6 +39,19 @@ describe ("Employee Test", () => {
 
         //assert
         expect(email).toBe(email); //toBe works! as it says it uses === to check strict equality
+    })
+
+    test("getRole() will return the role property", () => {
+
+        //Arrange -- prepare the env
+        const role = "Founder";
+        const roleTest = new Employee (1, 'Founder', role);
+
+        //act
+        roleTest.getEmail('test Role');
+
+        //assert
+        expect(role).toBe(role); //toBe works! as it says it uses === to check strict equality
     });
 
 })
