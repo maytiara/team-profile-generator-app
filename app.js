@@ -19,7 +19,7 @@ async function main() { //function for question set to be asked inside node.js
 			type: 'list',
 			message: 'Please enter the position?',
 			name: 'role',
-			choices: ['managerRole', 'engineerRole', 'internRole',]
+			choices: [managerRole, engineerRole, internRole,]
 		},
 		{
 			type: 'input',
