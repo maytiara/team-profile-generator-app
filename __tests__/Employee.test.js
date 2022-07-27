@@ -55,5 +55,3 @@ describe ("Employee Test", () => {
     });
 
 })
-
-// add the additional test per js....
