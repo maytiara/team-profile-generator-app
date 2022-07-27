@@ -19,17 +19,17 @@ function generateCard(employee) { // function to generate the card for each empl
     // Manager, for Office Number
     if (employee.getRole() === 'Manager') {
         replacedData = replacedData.replace('{{attr_key}}', 'Office Number')
-            replace('{{attr_value}}', employee.getOfficeNumber())
+            .replace('{{attr_value}}', employee.getOfficeNumber())
     }
     // Engineer, for Github
     if (employee.getRole() === 'Engineer') {
         replacedData = replacedData.replace('{{attr_key}}', 'Github')
-            replace('{{attr_value}}', employee.getGithub())
+            .replace('{{attr_value}}', employee.getGithub())
     }
     // Engineer, for Github
     if (employee.getRole() === 'Intern') {
         replacedData = replacedData.replace('{{attr_key}}', 'School')
-            replace('{{attr_value}}', employee.getSchool())
+            .replace('{{attr_value}}', employee.getSchool())
     }
 
     return replacedData; //return the Let replacedData => string
@@ -40,12 +40,11 @@ function generateHtml (employees) {
 
     // reads the entire contents of index.html template
     const indexTemplate = fs.readFileSync(indexTemplatePath, 'utf-8');
-    // loop through each employee
 
     // generate a card for each employee
     const cards = employees.map(generateCard).join('') // syntax (data, option)
+    
     // after the loop, once done we will join the cards into one stack
-
     // replace the {{body}} with the card string
     return indexTemplate.replace('{{body}}', cards)
 
