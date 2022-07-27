@@ -1,10 +1,11 @@
-const inquirer = require('inquirer');
+const inquirer = require('inquirer'); //npm package
 const Engineer = require('./src/employees/Engineer');
 const Intern = require('./src/employees/Intern');
 const Manager = require('./src/employees/Manager');
-const fs = require('fs');
+const fs = require('fs'); // import the filesystem module
 
 const employees = []; //global variable with an empty array
+
 
 async function main() { //function for question set to be asked inside node.js
 
@@ -79,6 +80,13 @@ async function main() { //function for question set to be asked inside node.js
 	// This is the condition, once we have all the input questions has been answered.
 	// We will have another prompt asking if the user want to register another employee. 
   	if (!answers.register) { //TRUE, statement
+
+		// generate the html
+		const html = generateHtml(employees);
+
+		// creates a new html file, using synchronous method
+		fs.writeFileSync(outputHtmlFile, html, 'utf-8');
+
 		//FALSE, statement once the user answered NO
 	} 	else {
 		await main(); //This a recursive approach, that let user to repeats the same question in a loop cycle.
