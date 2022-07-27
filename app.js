@@ -4,6 +4,7 @@ const Intern = require('./src/employees/Intern');
 const Manager = require('./src/employees/Manager');
 const fs = require('fs'); // import the filesystem module
 const path = require('path');
+const generateHtml = require('./src/generate-html/html');
 
 const employees = []; //global variable with an empty array
 const renderedOutput = path.join(__dirname, 'dist', 'team-profile.html'); // assigned variable for the rendered output html file
