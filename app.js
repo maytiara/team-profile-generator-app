@@ -89,7 +89,7 @@ async function main() { //function for question set to be asked inside node.js
 		// creates a new html file, using synchronous method //fs.writeFileSync(outputHtmlFile, html, 'utf-8');
 		// using additional feature, try-catch block that may throw errors
 		try {
-			fs.writeFileSync(renderedOutput, html, 'utf-8'); // calling the fs module
+			fs.writeFileSync(renderedOutput, html, 'utf-8'); // calling the fs module ; syntax (data, file, options)
 			console.log("File written succesfully");
 		} catch (err) {
 			console.error(err);

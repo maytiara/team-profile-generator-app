@@ -7,11 +7,13 @@ const cardTemplatePath = path.join(__dirname, 'demo-templates', 'card-container.
 function generateCard(employee) { // function to generate the card for each employee => const cards
 
     // reads the entire contents of card.html template
-    const cardTemplate = fs.readFileSync(cardTemplatePath, 'utf-8');
+    const cardTemplate = fs.readFileSync(cardTemplatePath, 'utf-8'); // syntax (data, option)
     // replace the placeholders with the actual input data
-    const replacedData = cardTemplate.replace('{{name}}', employee.getName())
+    let replacedData = cardTemplate.replace('{{name}}', employee.getName())
         .replace('{{id}}', employee.getId())
         .replace('{{email}}', employee.getEmail())
+    
+    // Statement 
 }
 
 function generateHtml (employees) {
