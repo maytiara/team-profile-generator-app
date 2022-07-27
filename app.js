@@ -1,8 +1,14 @@
 const inquirer = require('inquirer');
+const employees = []; //global variable with an empty array
 
 async function base () { //function for question set to be asked inside node.js
 
-  const answers = await inquirer.prompt ([
+	//assigned variable inside the DOM function
+	const managerRole = 'manager';
+	const engineerRole = 'engineer';
+	const internRole = 'intern';
+
+	const answers = await inquirer.prompt ([
 		{
 			type: 'list',
       message: 'Please enter the role/position?',
@@ -60,6 +66,9 @@ async function base () { //function for question set to be asked inside node.js
 			name: 'register',
 		},
   ])
+
+  	// Once we received the emloyee details, we will store those input answers.
+
 
 	// This is the condition, once we have all the input questions has been answered.
 	// We will have another prompt asking if the user want to register another employee. 
