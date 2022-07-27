@@ -6,6 +6,7 @@ As part of module 10 assignment, Using the user-story **A manager want to genera
 In this module we have to build a small application that generates HTML file that displays the firstName, Role, ID#, Email, Role and per role there will have a specific question asking the Office Number(for Manager),github(for Engineer) and School(for Intern), and also, if the user wants to register more employee.
 
 ## Application
+- npm packages (inquirer@8 and -D jest)
 - Node.js for the powershell environment
 - jest.js for unit testing
 - git bash to push the files to the new Repo here in github
@@ -55,6 +56,9 @@ In this module we have to build a small application that generates HTML file tha
 ```
 
 ## Demo
+* Check out the link for testing and running the application, [**Demo video**](https://vimeo.com/734123626)
+
+![Generated, Team Profile html for demo](src/assets/generated-team-profile-app.gif)
 
 ## Github Link
 You might be a shooting star &#9733; Don't forget to click the ![star-button](src/assets/star-btn.png) button on any of my repositories [github/maytiara](https://github.com/maytiara)
