@@ -6,7 +6,7 @@ describe ("Employee Test", () => {
 
         //Arrange -- prepare the env
         const name = "Name";
-        const nameTest = new Employee (1, 'karen@anonymous.com', name);
+        const nameTest = new Employee (1, 'karen', name);
 
         //act
         const result = nameTest.getName();
@@ -26,6 +26,19 @@ describe ("Employee Test", () => {
 
         //assert
         expect(id).toBe(id); //toBe works! as it says it uses === to check strict equality
+    })
+
+    test("getEmail() will return the email property", () => {
+
+        //Arrange -- prepare the env
+        const email = "karen@dot.com";
+        const emailTest = new Employee (1, 'karen@dot.com', email);
+
+        //act
+        emailTest.getEmail('test Email');
+
+        //assert
+        expect(email).toBe(email); //toBe works! as it says it uses === to check strict equality
     });
 
 })
