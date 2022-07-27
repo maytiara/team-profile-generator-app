@@ -54,7 +54,7 @@ describe ("Engineer Test", () => {
         expect(role).toBe(role); //toBe works! as it says it uses === to check strict equality
     })
 
-    test("getGithub() will return the office_number property", () => {
+    test("getGithub() will return the github property", () => {
 
         //Arrange -- prepare the env
         const github = "github.com/beta";
