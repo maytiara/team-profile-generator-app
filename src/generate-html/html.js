@@ -10,9 +10,10 @@ function generateCard(employee) { // function to generate the card for each empl
     // reads the entire contents of card-container.html template
     const cardTemplate = fs.readFileSync(cardTemplatePath, 'utf-8'); // syntax (data, option)
     // replace the placeholders with the actual input data
-    let replacedData = cardTemplate.replace('{{name}}', employee.getName())
-        .replace('{{id}}', employee.getId())
-        .replace('{{email}}', employee.getEmail())
+    let replacedData = cardTemplate.replace('{{name}}', employee.getName()) // name, generic
+        .replace('{{role}}', employee.getRole()) // role, generic
+        .replace('{{id}}', employee.getId()) // id, generic
+        .replace('{{email}}', employee.getEmail()) // email, generic
     
     // Statements to replace the placeholder specific per role
     // Manager, for Office Number
