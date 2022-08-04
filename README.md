@@ -3,7 +3,7 @@
 
 ## Description
 As part of module 10 assignment, Using the user-story **A manager want to generate a webpage that displays team profile with basic info**.
-In this module we have to build a small application that generates HTML file that displays the firstName, Role, ID#, Email, Role and per role there will have a specific question asking the Office Number(for Manager),github(for Engineer) and School(for Intern), and also, if the user wants to register more employee.
+In this module we have to build a small application that generates HTML file that displays the firstName, Role, ID#, Email and per role there will have a specific question asking the Office Number(for Manager),github(for Engineer) and School(for Intern), and also, if the user wants to register more employee.
 
 ## Application
 - npm packages (inquirer@8 and -D jest)
@@ -44,11 +44,11 @@ In this module we have to build a small application that generates HTML file tha
         └── Manager.js
         ├── Engineer.js
         └── Intern.js
-    ├── generate-html           //classes that required to export the module     
-        ├── html.js
-        └── demo-templates      //placeholder template for generated data
-            ├── index.html
-            └── card-container.html
+├── generate-html           //classes that required to export the module     
+    ├── html.js
+    └── demo-templates      //placeholder template for generated data
+        ├── index.html
+        └── card-container.html
 └── package-lock.json
 └── package.json
 └── app.js                      //main script for the app
